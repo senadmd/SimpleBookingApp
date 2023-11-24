@@ -6,8 +6,9 @@ import { bookingApi } from "./booking/bookingApi";
 
 
 const useLogging =import.meta.env.VITE_USE_REDUX_LOGGING === 'true';
+
 const store = configureStore({
-    reducer: { bookingSlice: bookingSliceReducer, loginSlice: loginSliceReducer, bookingApi: bookingApi.reducer },
+    reducer: { bookingSlice: bookingSliceReducer, loginSlice: loginSliceReducer, [bookingApi.reducerPath]: bookingApi.reducer },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat( (useLogging) ? [createLogger()] : []).concat(bookingApi.middleware)
 });
 

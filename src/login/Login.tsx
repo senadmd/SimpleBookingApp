@@ -13,7 +13,7 @@ return (
     <>
 <h1>Login to BookingApp</h1>
 <div className="card">
-  <input style={{padding:'5px', margin:'15px'}} placeholder='Namn' ref={usernameRef} />
+  <input style={{padding:'5px', margin:'15px'}} placeholder='Name' ref={usernameRef} />
   <button onClick={() => dispatchLogin(usernameRef.current?.value??"")}>
     Sign in
   </button>

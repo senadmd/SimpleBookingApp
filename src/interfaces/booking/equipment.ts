@@ -1,3 +1,6 @@
-export enum Equipment {
-    PHONE, PROJECTOR, WHITEBOARD, SCREEN
+import { EquipmentType } from "./equipmentType";
+
+export interface Equipment {
+    id: number,
+    type: EquipmentType
 }
