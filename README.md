@@ -2,7 +2,7 @@
 Simple Booking App with Vite + TS + ReactJS + Redux Toolkit.\
 This ReactJS App is to be used together with [SimpleBookingAppApi](https://github.com/senadmd/SimpleBookingAppApi)
 ## Prerequisites
-### Requires NPM
+### Requires npm ([Download Here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
 ## Getting Started
 1. Download och setup [SimpleBookingAppApi](https://github.com/senadmd/SimpleBookingAppApi)
 2. Pull down this repository using git
