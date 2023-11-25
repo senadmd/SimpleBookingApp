@@ -18,9 +18,14 @@ export const bookingSlice = createSlice({
     },
     extraReducers: (builder) => {
         // Add reducers for additional action types here, and handle loading state as needed
-        builder.addMatcher(bookingApi.endpoints.getRooms.matchFulfilled, (state, action:PayloadAction<Room[]| undefined>) => {
+        builder.addMatcher(bookingApi.endpoints.getRooms.matchFulfilled, (state, action) => {
           // Add user to the state array
           state.availableRooms = action.payload??[]
+        }),
+        builder.addMatcher(bookingApi.endpoints.bookRoom.matchFulfilled, (state, action) => {
+          // Add user to the state array
+          state.availableRooms = state.availableRooms.filter(x=> x.id != action.meta.arg.originalArgs.roomId)
+          state.bookedRooms = state.bookedRooms.concat(action.meta.arg.originalArgs)
         })
       }
 });

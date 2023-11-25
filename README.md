@@ -1,6 +1,6 @@
 # SimpleBookingApp
-Simple Booking App with Vite + TS + ReactJS + Redux Toolkit
-The App is to be used together with SimpleBookingAppApi [SimpleBookingAppApi](https://github.com/senadmd/SimpleBookingAppApi)
+Simple Booking App with Vite + TS + ReactJS + Redux Toolkit.
+This ReactJS App is to be used together with [SimpleBookingAppApi](https://github.com/senadmd/SimpleBookingAppApi)
 ## Prerequisites
 ### Requires NPM
 ## Getting Started
