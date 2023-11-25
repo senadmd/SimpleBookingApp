@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import '../App.css'
 import { useAppDispatch } from '../hooks';
 import { loginUser } from './loginSlice';
+
 function Login() {
     const usernameRef = useRef<HTMLInputElement>(null);
     const dispatch = useAppDispatch();
@@ -12,7 +13,7 @@ function Login() {
 return (
     <>
 <h1>Login to BookingApp</h1>
-<div className="card">
+<div>
   <input style={{padding:'5px', margin:'15px'}} placeholder='Name' ref={usernameRef} />
   <button onClick={() => dispatchLogin(usernameRef.current?.value??"")}>
     Sign in

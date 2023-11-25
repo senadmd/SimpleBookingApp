@@ -8,7 +8,7 @@ export const bookingApi = createApi({
     getRooms: builder.query<Room[],void>({
       query: () => 'room'
     }),
-    bookRoom: builder.mutation<BookingRequest, BookingRequest>({
+    bookRoom: builder.mutation<void, BookingRequest>({
       query: (body) => ({
         url: 'booking',
         method: 'POST',
@@ -18,4 +18,4 @@ export const bookingApi = createApi({
   }),
 })
 
-export const { useGetRoomsQuery } = bookingApi;
+export const { useGetRoomsQuery, useBookRoomMutation } = bookingApi;

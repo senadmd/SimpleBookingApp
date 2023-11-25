@@ -6,6 +6,7 @@ import { BsProjectorFill } from "react-icons/bs";
 import { MdScreenshotMonitor } from "react-icons/md";
 import { PiMarkerCircleFill } from "react-icons/pi";
 import { EquipmentType } from "../interfaces/booking/equipmentType";
+
 export const renderEquipment = (e: Equipment[]) => ((e.length > 0) ? (e.map(x => {
     switch (x.type) {
         case EquipmentType.WHITEBOARD:
